@@ -27,3 +27,19 @@ Template.postSubmit.events({
     //console.log(post._id);
   }
 });
+
+Template.postItem.events({
+    'click #post_del': function(e) {
+        e.preventDefault();
+        //alert(this._id);
+
+        //check login
+        //Router.go('accessDenied');
+        if (!Meteor.user() && !Meteor.loggingIn()){
+            Router.go('accessDenied');
+        }
+        else{
+            Posts.remove({_id: this._id});
+        }
+    }
+});

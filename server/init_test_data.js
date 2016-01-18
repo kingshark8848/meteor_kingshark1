@@ -1,3 +1,4 @@
+/*
 if (Posts.find().count() === 0) {
   Posts.insert({
     title: 'Introducing Telescope',
@@ -14,3 +15,4 @@ if (Posts.find().count() === 0) {
     url: 'http://themeteorbook.com'
   });
 }
+*/

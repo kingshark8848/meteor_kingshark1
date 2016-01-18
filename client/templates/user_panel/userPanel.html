@@ -1,0 +1,54 @@
+<template name="userPanel">
+    {{#if currentUser}}
+        <div class="btn-group">
+            <button type="button" class="btn navbar-btn btn-warning dropdown-toggle"
+                    data-toggle="dropdown">
+                About you <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">f1</a></li>
+                <li><a href="#">f2</a></li>
+                <li><a href="#">f3</a></li>
+                <li class="divider"></li>
+                <li><a href="#" id="link-logout">Logout</a></li>
+            </ul>
+        </div>
+    {{else}}
+        <!--login-->
+        <div class="btn-group">
+            <button type="button" class="btn navbar-btn btn-success" data-toggle="modal" data-target="#login-modal">Login</button>
+        </div>
+
+        <div id="login-modal" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        {{>loginForm}}
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/login-->
+
+        <!--sign up-->
+        <div class="btn-group">
+            <button type="button" class="btn navbar-btn btn-danger" data-toggle="modal" data-target="#sign-up">Sign up</button>
+        </div>
+
+        <div id="sign-up" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        {{>signUpForm}}
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/sign up-->
+
+    {{/if}}
+</template>

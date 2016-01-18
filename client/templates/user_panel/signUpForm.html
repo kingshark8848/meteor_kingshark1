@@ -1,0 +1,30 @@
+<template name="signUpForm">
+    <form role="form" id="form-sign-up">
+        <div class="form-group">
+            <label for="sign-up-fullName">Full Name</label>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6"><input type="text" name="sign-up-firstName" class="form-control"
+                                                               placeholder="First Name"></div>
+                <div class="col-xs-6 col-sm-6 col-md-6"><input type="text" name="sign-up-lastName" class="form-control"
+                                                               placeholder="Last Name"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sign-up-emailAddress">Email Address</label>
+            <input type="email" name="sign-up-emailAddress" class="form-control" placeholder="What's your email?">
+        </div>
+
+        <div class="form-group">
+            <label for="sign-up-username">Username</label>
+            <input type="text" name="sign-up-username" class="form-control" placeholder="Think a username?">
+        </div>
+
+        <div class="form-group">
+            <label for="sign-up-password">Password</label>
+            <input type="password" name="sign-up-password" class="form-control"
+                   placeholder="How about a password, pal?">
+        </div>
+        <button type="submit" class="btn btn-primary btn-sign-up">Sign Up</button>
+    </form>
+</template>

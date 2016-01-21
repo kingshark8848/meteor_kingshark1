@@ -18,6 +18,11 @@
                     {{>Template.dynamic template=tab}}
                 </div>
                 <div class="modal-footer">
+                    {{#if has_user_msg}}
+                        <div class="alert alert-warning">
+                            <strong>Warning！</strong>{{user_msg}}
+                        </div>
+                    {{/if}}
                 </div>
             </div>
         </div>

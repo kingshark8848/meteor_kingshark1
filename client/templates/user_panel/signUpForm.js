@@ -17,9 +17,17 @@ Template.signUpForm.events({
             email: email,
             firstName: firstName,
             lastName: lastName
+        },function(error){
+            if (error){
+                //console.log(error.reason);
+                Session.set('user_msg', error.reason);
+            }
+            else{
+                $("#login-modal").modal("hide");
+            }
         });
 
-        $("#sign-up").modal("hide");
+        //$("#login-modal").modal("hide");
 
         //Router.go('/');
     }

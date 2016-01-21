@@ -1,0 +1,9 @@
+<template name="nav_right">
+    {{#if currentUser}}
+        {{>nav_user_panel}}
+
+    {{else}}
+        <!--login-->
+        {{>nav_login}}
+    {{/if}}
+</template>

@@ -29,6 +29,11 @@ Template.nav_login.events({
         //template.currentTab.set("loginForm");//reset current tab to "login"
     },
 
+    'show.bs.modal': function(event,template){
+        template.currentTab.set("loginForm");//reset current tab to "login"
+        $( "#modal-login-tab li[data-template='loginForm']").addClass("active");
+        $( "#modal-login-tab li[data-template!='loginForm']").removeClass("active");
+    },
 
     'click .nav-pills li': function( event, template ) {
         var currentTab = $( event.target ).closest( "li" );

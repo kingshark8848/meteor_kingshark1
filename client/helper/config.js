@@ -31,3 +31,7 @@ Template.registerHelper(
         return false;
     }
 });
+
+Template.registerHelper('equals', function (a, b) {
+    return a === b;
+});

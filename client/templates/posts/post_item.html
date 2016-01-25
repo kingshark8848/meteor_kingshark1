@@ -1,12 +1,14 @@
 <template name="postItem">
-  <div class="post">
-    <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+    <div class="post">
+        <div class="post-content">
+            <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+        </div>
+        <!--<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>-->
+        <a href="/posts/{{_id}}" class="discuss btn btn-default">Discuss</a>
+        {{#if canEdit}}
+            <a class="btn btn-default" id="post_del">Delete</a>
+        {{/if}}
     </div>
-     <!--<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>-->
-      <a href="/posts/{{_id}}" class="discuss btn btn-default">Discuss</a>
-      <a class="discuss btn btn-default" id="post_del">Delete</a>
-  </div>
 </template>
 
 

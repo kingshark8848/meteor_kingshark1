@@ -22,12 +22,15 @@
  visible: true,
  }]
  });*/
-Template.registerHelper(
-    'isAdmin', function () {
-    if (Meteor.user()){
-        return Meteor.user().type == 'admin';
-    }
-    else{
+Template.registerHelper('hasPermission', function (p_type) {
+    if (p_type=='admin'){
+        if (Meteor.user()){
+            return Meteor.user().type == 'admin';
+        }
+        else{
+            return false;
+        }
+    }else{
         return false;
     }
 });

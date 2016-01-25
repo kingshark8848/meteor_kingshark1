@@ -9,7 +9,12 @@ Template.postItem.helpers({
         var a = document.createElement('a');
         a.href = this.url;
         return a.hostname;
+    },
+
+    canEdit: function(){
+        return ownsPost(this._id)
     }
+
 });
 
 Template.postSubmit.events({
@@ -47,7 +52,8 @@ Template.postItem.events({
             Router.go('accessDenied');
         }
         else {
-            Posts.remove({_id: this._id});
+            //Posts.remove({_id: this._id});
+            Meteor.call('postDel', this._id)
         }
     }
 });

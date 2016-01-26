@@ -1,24 +1,54 @@
 <template name="header">
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{pathFor 'postsList'}}">Microscope</a>
-    </div>
-    <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
-          {{#if hasPermission "admin"}}
-          <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
-          {{/if}}
-      </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-          {{> nav_right}}
-      </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"><img class="mh-header-image" src="/img/banner.jpg" height="100"
+                                       alt="U.S. Soccer Zone"></div>
+            <div class="col-md-9"><h1>US Soccer Zone</h1></div>
+        </div>
     </div>
-  </nav>
+
+    <!--    <div class="mh-site-logo" role="banner" style="text-align:left">
+            <img class="mh-header-image" src="/img/banner.jpg" height="100" alt="U.S. Soccer Zone">
+        </div>-->
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{pathFor 'postsList'}}"><i class="fa fa-home"></i> Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Discussion Board<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Players</a></li>
+                <li><a href="#">Matches</a></li>
+                <li><a href="#">Formation Design</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                {{#if hasPermission "admin"}}
+                    <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
+                {{/if}}
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                {{> nav_right}}
+            </ul>
+        </div>
+    </nav>
 </template>

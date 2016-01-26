@@ -1,6 +1,7 @@
+/*
 .post {
-    /* For modern browsers */
-    /* For IE 6/7 (trigger hasLayout) */
+    !* For modern browsers *!
+    !* For IE 6/7 (trigger hasLayout) *!
     *zoom: 1;
     position: relative;
     opacity: 1; }
@@ -44,4 +45,4 @@
 .post .discuss {
     display: block;
     float: right;
-    margin-top: 7px; }
+    margin-top: 7px; }*/
